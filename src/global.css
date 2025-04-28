@@ -1,0 +1,21 @@
+:root{
+    --branco: #f2f2f2;
+    --preto: #333333;
+    --azul-escuro: #215A6D;
+    --azul-claro: #2A82AE;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--preto);
+}
+
+body, input, textarea, button{
+    font-size: 1rem;
+    font-family: sans-serif;
+} 
