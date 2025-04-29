@@ -16,11 +16,33 @@
     color: #c5c5c5;
     transition: 0.2s ease-in-out;
 }
-
+.Cabecalho a:hover svg {
+    fill: var(--azul-escuro);
+    background-color: #c5c5c5;
+    transition: 0.2s ease-in-out;
+}
 .Cabecalho_menu {
     gap: 1rem;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.Cabecalho_menu svg{
+    fill: #c5c5c5;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background-color: var(--branco);
+    border-radius: 50px;
+    fill: var(--azul-claro);
+}
+.Cabecalho_consultar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+
 
 .Cabecalho h1 {
     font-size: 1.5rem;
@@ -30,9 +52,9 @@
     color: var(--azul-claro);
 }
 
-.Cabecalho span:hover {
+.Cabecalho a:hover span{
     color: var(--azul-escuro);
-    transition: 0.1s ease-in-out;
+    transition: 0.2s ease-in-out;
 }
 
 @media screen and (max-width: 450px) {

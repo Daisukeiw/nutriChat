@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import style from './Cabecalho.module.css'
+import { ChatBotIcon } from '../chatbot/ChatBotIcon'
 
 const Cabecalho = () => {
     return (
@@ -16,14 +17,17 @@ const Cabecalho = () => {
                 <Link to="/">
                     Home
                 </Link>
-                <Link to="/consultar"> 
+                <Link to="/consultar" className={style.Cabecalho_consultar}>
+                    
                     Consultar
+                    <ChatBotIcon />
                 </Link>
                 <Link to="/login">
                     <span>
                         Login/Cadastrar
                     </span>
                 </Link>
+                
             </div>
             
         </div>
