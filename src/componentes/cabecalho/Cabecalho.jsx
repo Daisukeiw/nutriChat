@@ -1,8 +1,12 @@
 import { Link } from 'react-router-dom'
 import style from './Cabecalho.module.css'
 import { ChatBotIcon } from '../chatbot/ChatBotIcon'
+import { useAuth } from "../../firebaseconfig/useAuth";
+
 
 const Cabecalho = () => {
+    const usuario = useAuth(); // Verifica se o usuário está autenticado
+
     return (
         <div className={style.Cabecalho}>
             <div className={style.Cabecalho_logo}>
@@ -17,17 +21,23 @@ const Cabecalho = () => {
                 <Link to="/">
                     Home
                 </Link>
-                <Link to="/consultar" className={style.Cabecalho_consultar}>
-                    
-                    Consultar
-                    <ChatBotIcon />
-                </Link>
+                {usuario ? ( // Exibe "Consultar" apenas se o usuário estiver autenticado
+                    <>
+                    <Link to="/consultar" className={style.Cabecalho_consultar}>
+                        Consultar
+                        <ChatBotIcon />
+                    </Link>
+                    <Link to="/perfil" className={style.Cabecalho_editarPerfil}>
+                        <span>Editar Perfil</span>
+                    </Link>
+                    </>
+                ) : (
                 <Link to="/login">
                     <span>
                         Login/Cadastrar
                     </span>
                 </Link>
-                
+                )}
             </div>
             
         </div>
