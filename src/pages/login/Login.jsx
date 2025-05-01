@@ -1,11 +1,12 @@
-import style from './Login.module.css'
+import React from 'react';
+import Login from '../../componentes/login-form/login'; // Corrigir o caminho
 
-const Login = () => {
-    return (
-        <h1>
-            Login
-        </h1>
-    )
-}
+const LoginPage = () => {
+  return (
+    <div className="app">
+      <Login />
+    </div>
+  );
+};
 
-export { Login }
+export { LoginPage };

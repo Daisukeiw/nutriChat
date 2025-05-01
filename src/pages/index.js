@@ -1,9 +1,9 @@
-export * from './home'
+export * from './home/Home';
 
-export * from './consultar'
+export * from './consultar/Consultar';
 
-export * from './login'
+export * from './login/Login'; 
 
-export * from './cadastrar'
+export * from './cadastrar/Cadastrar'; 
 
-export * from './perfil'
+export * from './perfil/Perfil';
