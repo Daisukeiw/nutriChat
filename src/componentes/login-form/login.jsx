@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../firebaseconfig/firebaseconfig"; // Corrigir o caminho
+import { auth } from "../../firebaseconfig/firebaseconfig"; 
 import style from './login.module.css';
 
 

@@ -1,11 +1,9 @@
 import styles from './Cadastrar.module.css'
+import { Cadastro } from '../../componentes'
 
 const Cadastrar = () => {
     return (
-        //testando
-        <h1>
-            Cadastrar 
-        </h1>
+        <Cadastro />
     )
 }
 
