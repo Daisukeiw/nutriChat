@@ -12,6 +12,7 @@
     margin-bottom: 20px;
     border-bottom: 1px solid #215A6D;
     padding-bottom: 10px;
+    text-align: center;
 }
 
 .profileSection {
@@ -29,12 +30,19 @@
     color: #fff;
 }
 
+.profileInputDisabled {
+    background-color: #3a3a3a; /* Cor de fundo diferente */
+    color: #a0a0a0; /* Cor do texto mais clara */
+    cursor: not-allowed; /* Cursor indicando que está desabilitado */
+    border: 1px solid #555; /* Borda mais clara */
+}
+
 .profileActions div {
     margin-bottom: 10px;
 }
 
 .profileButton {
-    background-color: #007bff;
+    background-color: var(--azul-claro);
     color: #fff;
     border: none;
     padding: 10px 15px;
@@ -44,8 +52,15 @@
     transition: background-color 0.3s;
 }
 
+.profileButtons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-end;
+}
 
 
 .profileButton:hover {
-    background-color: #0056b3;
+    background-color: var(--azul-escuro);
 }

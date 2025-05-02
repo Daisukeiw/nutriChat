@@ -70,6 +70,7 @@
   background-color: #2D2D29;
   border-radius: 7px;
   cursor: pointer;
+  color: #fff;
 }
 
 .loginButton button:hover {
