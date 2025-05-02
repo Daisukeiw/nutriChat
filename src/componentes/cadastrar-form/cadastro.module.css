@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+.bodycadastro {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 1500px;
+  height: 80vh;
+  display: flex;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
+  margin-top: 200px;
+  border-radius: 5px;
+  background-color: #393934;
+  justify-content: center;
+  align-items: center;
+}
+
+.formImage {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #2A82AE;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.formImage h1 {
+  font-weight: 600;
+  font-size: 50px;
+}
+
+.form {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem;
+}
+
+.formHeader {
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  color: #fff;
+}
+
+.loginButton {
+  display: flex;
+  align-items: center;
+}
+
+.loginButton button {
+  width: 400px;
+  margin-top: 100px;
+  height: 40px;
+  border: none;
+  background-color: #2D2D29;
+  padding: 0.4rem 1rem;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.loginButton button:hover {
+  background-color: #000;
+  transition: all 0.4s;
+}
+
+.loginButton button a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #fff;
+}
+
+.formHeader h1::after {
+  content: '';
+  display: block;
+  width: 5rem;
+  height: 0.3rem;
+  background-color: #2A82AE;
+  margin: 0 auto;
+  position: absolute;
+  border-radius: 10px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 1rem 0;
+  width: 600px;
+}
+
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.1rem;
+}
+
+.inputBox input {
+  margin: 0.6rem 0;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px #0000001c;
+}
+
+.inputBox input:focus-visible {
+  outline: 1px solid #2A82AE
+}
+
+.inputBox label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.inputBox input::placeholder {
+  color: #000000be;
+}
+
+.singupButton button{
+  width: 100%;
+  border: none;
+  background-color: #2A82AE;
+  padding: 0.62rem;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.singupButton button:hover {
+  background-color: #fff;
+  transition: 0.4s;
+}
+
+.singupButton button a {
+  text-decoration: none;
+  font-size: 0.93rem;
+  font-weight: 500;
+  color: #f2f2f2;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    flex-direction: column-reverse;
+    height: auto;
+  }
+
+  .formImage, .form {
+    width: 100%;
+  }
+
+  .form {
+    padding: 2rem 1rem;
+  }
+
+  .inputGroup {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .formImage h1 {
+    font-size: 36px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .inputBox input {
+    padding: 0.6rem 1rem;
+  }
+}
