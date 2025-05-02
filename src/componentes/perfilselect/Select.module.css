@@ -1,0 +1,51 @@
+.profileContainer {
+    background-color: #1e1e1e;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.profileTitle {
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #215A6D;
+    padding-bottom: 10px;
+}
+
+.profileSection {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.profileInput {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #2e2e2e;
+    border: 1px solid #3a3a3a;
+    border-radius: 4px;
+    color: #fff;
+}
+
+.profileActions div {
+    margin-bottom: 10px;
+}
+
+.profileButton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+
+.profileButton:hover {
+    background-color: #0056b3;
+}
