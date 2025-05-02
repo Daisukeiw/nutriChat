@@ -22,8 +22,9 @@ const Login = () => {
   };
 
   return (
+    
     <div className={style.loginBorder}>
-      <h2 className={style.titleform}>Welcome Back..</h2>
+      <h2 className={style.titleform}>Welcome Back :)</h2>
       <div className={style.loginContainer}>
         <form className={style.loginForm} onSubmit={handleLogin}>
           <label htmlFor="email">Email</label>
@@ -42,15 +43,19 @@ const Login = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
+          <div className={style.botaocontent}>
           <button type="submit">Entrar</button>
           {error && <p style={{ color: "red" }}>{error}</p>}
           <p className={style.registerText}>
             Ainda não tem uma conta? <a href="/cadastrar">Cadastrar-se</a>
           </p>
+          </div>
         </form>
       </div>
     </div>
+    
   );
+  
 };
 
 export default Login;
