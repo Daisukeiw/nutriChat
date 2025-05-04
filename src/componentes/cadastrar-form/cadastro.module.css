@@ -152,6 +152,38 @@
   color: #f2f2f2;
 }
 
+/* Estilo para o botão de upload */
+.fileUploadLabel {
+  display: inline-block;
+  padding: 0.8rem 1.2rem;
+  background-color: #2A82AE;
+  color: #fff;
+  border-radius: 7px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  margin-top: 0.6rem;
+}
+
+.fileUploadLabel:hover {
+  background-color: #1e6b8c;
+}
+
+/* Esconde o input real */
+.fileInput {
+  display: none;
+}
+
+/* Estilo para o nome do arquivo */
+.fileName {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #fff;
+  font-style: italic;
+}
+
 @media (max-width: 1200px) {
   .container {
     flex-direction: column-reverse;
