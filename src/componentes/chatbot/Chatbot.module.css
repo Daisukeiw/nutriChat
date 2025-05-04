@@ -1,5 +1,5 @@
 .bodyContainer {
-    padding: 10px 80px 0;
+    padding: 15px 80px 0;
 }
 
 .chatbotPopup{ 
@@ -128,7 +128,7 @@
 
 @media screen and (max-width: 850px) {
     .bodyContainer {
-        padding: 0;
+        padding: 12px ;
     }
     .chatBody{
         padding: 10px 10px;

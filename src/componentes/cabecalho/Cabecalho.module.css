@@ -1,10 +1,11 @@
 .Cabecalho {
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--preto);
+    z-index: 1000;
+    background: #242424;
     color: var(--branco);
-    border-bottom: 2px solid var(--azul-escuro);
     padding: 0.5rem;
 }
 
@@ -37,10 +38,17 @@
     fill: var(--azul-claro);
 }
 .Cabecalho_consultar{
+    background-color: var(--azul-claro);
+    padding: 5px;
+    border-radius: 10px;
+    color: var(--branco);
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 3px;
+}
+.Cabecalho_consultar:hover{
+    background-color: var(--azul-escuro);
 }
 
 /* Estilo para a imagem de perfil no cabeçalho */
