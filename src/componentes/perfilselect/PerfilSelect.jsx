@@ -1,6 +1,5 @@
 import style from "./Select.module.css";
 import React, { useEffect, useState } from "react";
-import { signOut } from "firebase/auth";
 import { auth, db } from "../../firebaseconfig/firebaseconfig";
 import { doc, getDoc, updateDoc } from "firebase/firestore";
 
@@ -8,36 +7,66 @@ const PerfilSelect = () => {
     const [nome, setNome] = useState("");
     const [telefone, setTelefone] = useState("");
     const [email, setEmail] = useState("");
+    const [profileImage, setProfileImage] = useState(""); // Estado para a imagem de perfil
+    const [loading, setLoading] = useState(true); // Estado de carregamento
 
-    // Carregar informações do usuário logado
     useEffect(() => {
         const fetchUserData = async () => {
             if (auth.currentUser) {
                 const userId = auth.currentUser.uid;
-                const userDoc = doc(db, "users", userId);
-                const userSnapshot = await getDoc(userDoc);
+                const userDocRef = doc(db, "users", userId); // Referência ao documento no Firestore
+                const userSnapshot = await getDoc(userDocRef);
 
                 if (userSnapshot.exists()) {
                     const userData = userSnapshot.data();
                     setNome(userData.nome || "");
                     setTelefone(userData.telefone || "");
                     setEmail(userData.email || "");
+                    setProfileImage(userData.profileImage || ""); // Carregar a imagem de perfil
+                } else {
+                    console.error("Documento do usuário não encontrado.");
                 }
+            } else {
+                console.error("Usuário não autenticado.");
             }
+            setLoading(false); // Finaliza o carregamento
         };
 
         fetchUserData();
     }, []);
 
+    const handleImageUpload = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onloadend = () => {
+                setProfileImage(reader.result); // Atualiza a imagem codificada em Base64
+            };
+            reader.readAsDataURL(file);
+        }
+    };
+
+    const handleLogout = async () => {
+        try {
+            await auth.signOut(); // Firebase signOut
+            alert("Você foi deslogado com sucesso!");
+            window.location.href = "/login"; // Redireciona para a página de login
+        } catch (error) {
+            console.error("Erro ao deslogar:", error);
+            alert("Não foi possível deslogar. Tente novamente.");
+        }
+    };
+
     const handleUpdateProfile = async () => {
         if (auth.currentUser) {
             const userId = auth.currentUser.uid;
-            const userDoc = doc(db, "users", userId);
+            const userDocRef = doc(db, "users", userId); // Referência ao documento no Firestore
 
             try {
-                await updateDoc(userDoc, {
+                await updateDoc(userDocRef, {
                     nome,
                     telefone,
+                    profileImage, // Atualiza a imagem de perfil no Firestore
                 });
                 alert("Perfil atualizado com sucesso!");
             } catch (error) {
@@ -47,26 +76,44 @@ const PerfilSelect = () => {
         }
     };
 
-    const handleLogout = async () => {
-        try {
-            await signOut(auth);
-            console.log("Usuário deslogado.");
-            alert("Você foi deslogado com sucesso!");
-            window.location.href = "/login"; // Redirect to the login page
-        } catch (error) {
-            console.error("Erro ao deslogar:", error);
-            alert("Não foi possível deslogar. Tente novamente.");
-        }
-    };
+    if (loading) {
+        return (
+            <div className={style.loadingContainer}>
+                <p className={style.loadingText}>Carregando dados...</p>
+            </div>
+        );
+    }
 
     return (
         <div className={style.profileContainer}>
             <h2 className={style.profileTitle}>Configurações da conta</h2>
             <div className={style.profileSection}>
                 <div className={style.profileActions}>
-
+                    <div className={style.imageContainer}>
+                        <p>Imagem de Perfil</p>
+                        {profileImage && (
+                            <img
+                                src={profileImage}
+                                alt="Imagem de Perfil"
+                                className={style.profileImage}
+                            />
+                        )}
+                        <label htmlFor="fileUpload" className={style.fileUploadLabel}>
+                            Escolher Imagem
+                        </label>
+                        <input
+                            type="file"
+                            id="fileUpload"
+                            accept="image/*"
+                            onChange={handleImageUpload}
+                            className={style.fileInput} // Esconde o input real
+                        />
+                        {profileImage && (
+                            <p className={style.fileName}>Imagem selecionada!</p>
+                        )}
+                    </div>
                     <div>
-                    <p>E-mail</p>
+                        <p>E-mail</p>
                         <input
                             type="email"
                             value={email}
@@ -92,13 +139,11 @@ const PerfilSelect = () => {
                             className={style.profileInput}
                         />
                     </div>
-                    
                     <div className={style.profileButtons}>
                         <button className={style.profileButton} onClick={handleUpdateProfile}>
                             Salvar Alterações
                         </button>
-                    
-                        <button className={style.profileButton} onClick={handleLogout}>
+                        <button className={style.logoutButton} onClick={handleLogout}>
                             Logout
                         </button>
                     </div>

@@ -1,11 +1,31 @@
-import { Link } from 'react-router-dom'
-import style from './Cabecalho.module.css'
-import { ChatBotIcon } from '../chatbot/ChatBotIcon'
+import { Link } from 'react-router-dom';
+import style from './Cabecalho.module.css';
+import { ChatBotIcon } from '../chatbot/ChatBotIcon';
 import { useAuth } from "../../firebaseconfig/useAuth";
-
+import { useState, useEffect } from 'react';
+import { auth, db } from "../../firebaseconfig/firebaseconfig";
+import { doc, getDoc } from "firebase/firestore";
 
 const Cabecalho = () => {
     const usuario = useAuth(); // Verifica se o usuário está autenticado
+    const [profileImage, setProfileImage] = useState(""); // Estado para a imagem de perfil
+
+    useEffect(() => {
+        const fetchUserData = async () => {
+            if (auth.currentUser) {
+                const userId = auth.currentUser.uid;
+                const userDocRef = doc(db, "users", userId); // Referência ao documento no Firestore
+                const userSnapshot = await getDoc(userDocRef);
+
+                if (userSnapshot.exists()) {
+                    const userData = userSnapshot.data();
+                    setProfileImage(userData.profileImage || ""); // Carregar a imagem de perfil
+                }
+            }
+        };
+
+        fetchUserData();
+    }, [usuario]);
 
     return (
         <div className={style.Cabecalho}>
@@ -21,14 +41,22 @@ const Cabecalho = () => {
                 <Link to="/">
                     Home
                 </Link>
-                {usuario ? ( // Exibe "Consultar" apenas se o usuário estiver autenticado
+                {usuario ? ( // Exibe "Consultar" e a imagem de perfil apenas se o usuário estiver autenticado
                     <>
                     <Link to="/consultar" className={style.Cabecalho_consultar}>
                         Consultar
                         <ChatBotIcon />
                     </Link>
                     <Link to="/perfil" className={style.Cabecalho_editarPerfil}>
-                        <span>Editar Perfil</span>
+                        {profileImage ? (
+                            <img
+                                src={profileImage}
+                                alt="Imagem de Perfil"
+                                className={style.Cabecalho_profileImage}
+                            />
+                        ) : (
+                            <span>Editar Perfil</span>
+                        )}
                     </Link>
                     </>
                 ) : (
@@ -39,9 +67,8 @@ const Cabecalho = () => {
                 </Link>
                 )}
             </div>
-            
         </div>
-    )
-}
+    );
+};
 
-export { Cabecalho }
+export { Cabecalho };

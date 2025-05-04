@@ -43,6 +43,20 @@
     gap: 3px;
 }
 
+/* Estilo para a imagem de perfil no cabeçalho */
+.Cabecalho_profileImage {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Torna a imagem circular */
+    object-fit: cover; /* Garante que a imagem se ajuste ao contêiner */
+    border: 2px solid var(--azul-claro); /* Borda para destacar a imagem */
+    cursor: pointer; /* Indica que é clicável */
+    transition: transform 0.2s ease-in-out;
+}
+
+.Cabecalho_profileImage:hover {
+    transform: scale(1.1); /* Aumenta levemente a imagem no hover */
+}
 
 .Cabecalho h1 {
     font-size: 1.5rem;

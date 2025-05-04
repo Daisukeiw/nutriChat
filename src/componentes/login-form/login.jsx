@@ -15,7 +15,7 @@ const Login = () => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       alert("Login realizado com sucesso!");
-      window.location.href = "/perfil"; // Redirecionar para o perfil
+      window.location.href = "/consultar"; // Redirecionar para o perfil
     } catch (err) {
       setError("Erro ao fazer login. Verifique suas credenciais.");
     }

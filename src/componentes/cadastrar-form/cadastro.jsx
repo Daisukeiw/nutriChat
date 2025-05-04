@@ -3,13 +3,14 @@ import style from './cadastro.module.css';
 import { auth, db } from "../../firebaseconfig/firebaseconfig"; 
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { doc, setDoc } from "firebase/firestore";
-import { Link } from 'react-router-dom'; // Corrigido para usar o Link do react-router-dom
+import { Link } from 'react-router-dom';
 
 const Cadastro = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [nome, setNome] = useState('');
   const [telefone, setTelefone] = useState('');
+  const [profileImage, setProfileImage] = useState(''); // Estado para a imagem de perfil
 
   const [
     createUserWithEmailAndPassword,
@@ -17,6 +18,17 @@ const Cadastro = () => {
     loading,
     error,
   ] = useCreateUserWithEmailAndPassword(auth);
+
+  const handleImageUpload = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setProfileImage(reader.result); // Armazena a imagem codificada em Base64
+      };
+      reader.readAsDataURL(file); // Converte a imagem para Base64
+    }
+  };
 
   const handleSignIn = async (e) => {
     e.preventDefault();
@@ -31,6 +43,7 @@ const Cadastro = () => {
         nome,
         telefone,
         email,
+        profileImage, // Salva a imagem de perfil no Firestore
       });
 
       alert("Usuário cadastrado com sucesso!");
@@ -105,9 +118,27 @@ const Cadastro = () => {
                   id="password"
                   placeholder="Digite sua Senha"
                   value={password}
-                  onChange={e => setPassword(e.target.value)}
+                  onChange={(e) => setPassword(e.target.value)}
                   required
                 />
+              </div>
+
+              <div className={style.inputBox}>
+                <label htmlFor="profileImage">Imagem de Perfil</label>
+                <label htmlFor="fileUpload" className={style.fileUploadLabel}>
+                  Escolher Imagem
+                </label>
+                <input
+                  type="file"
+                  name="profileImage"
+                  id="fileUpload"
+                  accept="image/*"
+                  onChange={handleImageUpload}
+                  className={style.fileInput}
+                />
+                {profileImage && (
+                  <p className={style.fileName}>Imagem selecionada!</p>
+                )}
               </div>
             </div>
 
