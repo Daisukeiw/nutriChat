@@ -15,7 +15,6 @@
     justify-content: center;
     background-color: #242424;
     border-radius: 15px;
-    border-bottom: 1 solid var(--azul-escuro);
 }
 .chatHeader .headerInfo{
     display: flex;
@@ -63,7 +62,7 @@
     align-self: flex-end;
     background-color: var(--branco);
     border-radius: 50px;
-    fill: var(--azul-escuro);
+    fill: var(--azul-claro);
 }
 
 .chatBody .message .messageText{
