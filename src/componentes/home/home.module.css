@@ -1,0 +1,29 @@
+
+
+
+.content1{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--azul-escuro);
+    color: white;
+    font-size: 20px;
+ 
+}
+
+.n1text{
+    color : #f1f1f1;
+    display: flex;
+    margin-top: 30vh;
+
+    margin-left: 10vw;
+    padding: 20px;
+}
+.n1text img {
+    width: 100%;  
+    max-width: 350px;
+    margin-top: -200px; 
+    height: auto;
+    margin-left: 150px;
+    
+}
