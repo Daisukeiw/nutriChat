@@ -31,6 +31,7 @@ const HomeComponent = () => {
         </div>
     </section>
     <section className={style.containerSobre}>
+      <h1>CARDS</h1>
     </section>
     </>
   );

@@ -3,7 +3,6 @@
     flex-direction: row;
     width: 100%;
     height: 60vh;
-
 }
 .informacoes {
     background-color: var(--preto);
@@ -23,7 +22,6 @@
     width: 40%;
     height: 60vh;
     gap: 20px;
-    padding: 30px;
 }
 .elementoVisual h2{
     font-family: 'Cascadia Mono', monospace;
@@ -45,10 +43,11 @@
     background-color: var(--branco);
     fill: var(--azul-claro);
     border-radius: 50%;
+    margin-top: 20px;
 }
 
 .cardInformacoes{
-    gap: 20px;
+    gap: 10px;
     display: flex;
     flex-direction: column;
     color: var(--branco);
@@ -88,10 +87,34 @@
 
 .containerSobre {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     height: 100vh;
     background-color: var(--branco);
 }
+.grupoCards{
+    display: flex;
+    flex-direction: row;
+
+}
+.title h1 {
+    font-size: 35px;
+    color: var(--preto);
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 800;
+  }
+.headerTitle h1::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 0.3rem;
+    background-color: #2A82AE;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+  }
 
 @keyframes typing {
     0% { width: 0; }
@@ -124,17 +147,35 @@
 @media screen and (max-width: 850px) {
     .containerIntroducao {
         flex-direction: column;
+        height: 100vh;
     }
     .informacoes {
         width: 100%;
-        height: 100vh;
+        padding: 0px;
     }
     .elementoVisual{
         width: 100%;
-        height: 100vh;
     }
     .elementoVisual svg{
         width: 200px;
         height: 200px;
     }
 }
+
+@media screen and (max-width: 380px) {
+    .cardInformacoes p{
+        font-size: 16px;
+    }
+    .cardInformacoes h1{
+        background-color: var(--preto);
+        font-size: 30px;
+        color: var(--branco);
+    }
+    .elementoVisual h2{
+        font-family: 'Cascadia Mono', monospace;
+        color: white;
+        font-size: 30px;
+        
+    }
+}
+
