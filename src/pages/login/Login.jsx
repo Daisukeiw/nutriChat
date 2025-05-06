@@ -6,7 +6,7 @@ const LoginPage = () => {
     <div className="app">
       <Login />
     </div>
-  );
+  ); 
 };
 
 export { LoginPage };

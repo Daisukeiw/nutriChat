@@ -5,6 +5,7 @@
     border-radius: 15px;
     max-width: 600px;
     margin: 15px auto;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .profileTitle {
@@ -18,6 +19,7 @@
 .profileSection {
     margin-top: 20px;
     margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .profileInput {
@@ -31,30 +33,30 @@
 }
 
 .profileInputDisabled {
-    background-color: #3a3a3a; /* Cor de fundo diferente */
-    color: #a0a0a0; /* Cor do texto mais clara */
-    cursor: not-allowed; /* Cursor indicando que está desabilitado */
-    border: 1px solid #555; /* Borda mais clara */
+    background-color: #3a3a3a; 
+    color: #a0a0a0; 
+    cursor: not-allowed; 
+    border: 1px solid #555;
 }
 
 .profileActions div {
     margin-bottom: 10px;
 }
 
-/* Estilo base para os botões */
+
 .profileButton,
 .logoutButton {
-    width: 150px; /* Define uma largura fixa para ambos os botões */
-    text-align: center; /* Centraliza o texto */
+    width: 150px; 
+    text-align: center; 
     padding: 10px 15px;
     border-radius: 4px;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin: 0 10px; /* Espaçamento horizontal entre os botões */
+    margin: 0 10px; 
 }
 
-/* Botão de Salvar Alterações */
+
 .profileButton {
     background-color: var(--azul-claro);
     color: #fff;
@@ -65,35 +67,35 @@
     background-color: var(--azul-escuro);
 }
 
-/* Botão de Logout */
+
 .logoutButton {
-    background-color: #d9534f; /* Vermelho para indicar Logout */
+    background-color: #d9534f; 
     color: #fff;
     border: none;
 }
 
 .logoutButton:hover {
-    background-color: #c9302c; /* Vermelho mais escuro no hover */
+    background-color: #c9302c; 
 }
 
-/* Contêiner para os botões */
+
 .profileButtons {
     display: flex;
-    justify-content: center; /* Centraliza os botões */
-    gap: 15px; /* Espaçamento uniforme entre os botões */
-    margin-top: 20px; /* Espaço acima dos botões */
+    justify-content: center;
+    gap: 15px; 
+    margin-top: 20px;
 }
 
-/* Estilo para a imagem de perfil */
-/* Contêiner para alinhar a imagem e o botão */
+
+
 .imageContainer {
     display: flex;
-    flex-direction: column; /* Alinha os elementos verticalmente */
-    align-items: center; /* Centraliza os elementos */
+    flex-direction: column; 
+    align-items: center; 
     gap: 15px;
 }
 
-/* Estilo para a imagem de perfil */
+
 .profileImage {
     width: 100px;
     height: 100px;
@@ -102,7 +104,7 @@
 
 }
 
-/* Estilo para o botão de upload */
+
 .fileUploadLabel {
     display: inline-block;
     padding: 10px 15px;
@@ -114,15 +116,15 @@
     font-size: 0.9rem;
     font-weight: 600;
     transition: background-color 0.3s ease;
-    margin-bottom: 5px; /* Espaço entre o botão e o texto */
+    margin-bottom: 5px;
 }
 
-/* Esconde o input real */
+
 .fileInput {
     display: none;
 }
 
-/* Estilo para o nome do arquivo */
+
 .fileName {
     margin-top: 5px;
     font-size: 0.85rem;
@@ -131,30 +133,30 @@
     text-align: center;
 }
 
-/* Contêiner para centralizar a mensagem de carregamento */
+
 .loadingContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Ocupa a altura total da tela */
-    background-color: #1e1e1e; /* Fundo escuro para combinar com o tema */
+    height: 100vh; 
+    background-color: #1e1e1e; 
     color: #fff;
 }
 
-/* Estilo para o texto de carregamento */
+
 .loadingText {
     font-size: 1.2rem;
     font-weight: bold;
-    color: var(--azul-claro); /* Cor principal do site */
-    animation: fadeIn 1.5s infinite; /* Animação para dar destaque */
-}
+    color: var(--azul-claro); 
+    animation: fadeIn 1.5s infinite; 
 
-/* Animação de fade-in */
 @keyframes fadeIn {
-    0%, 100% {
-        opacity: 0.5;
+    from {
+      opacity: 0;
+      transform: translateY(20px);
     }
-    50% {
-        opacity: 1;
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
-}
+  }
