@@ -31,7 +31,29 @@ const HomeComponent = () => {
         </div>
     </section>
     <section className={style.containerSobre}>
-      <h1>CARDS</h1>
+      <div className={style.itens}>
+        <div className={style.item}>
+          <h2>Sobre o NutriChat</h2>
+          <p>
+            O NutriChat é um assistente virtual que utiliza inteligência artificial para ajudar você a entender melhor suas refeições. Ele analisa os alimentos, calcula as calorias e fornece feedback sobre a qualidade da sua dieta.
+          </p>
+        </div>
+        <div className={style.item}>
+          <h2>Como Funciona</h2>
+          <p>
+            Basta informar o que você comeu e o NutriChat faz o resto. Ele fornece informações detalhadas sobre os alimentos, calorias e dicas para melhorar sua alimentação.
+          </p>
+        </div>
+        <div className={style.item}>
+          <h2>Benefícios</h2>
+          <p>
+            Com o NutriChat, você pode ter uma alimentação mais saudável, receber dicas personalizadas e entender melhor suas escolhas alimentares.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section className={style.timeline}>
+
     </section>
     </>
   );
