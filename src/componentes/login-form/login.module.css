@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
 
 
 
 .loginBorder {
     display: flex;
-    
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -16,10 +15,13 @@
     max-width: 1000px; 
     margin: 50px auto; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    animation: fadeIn 1s ease-in-out; 
+
 }
 
 .titleform {
-    font-family: 'Cascadia Mono', monospace;
+    font-family: 'Poppins', sans-serif; 
     color: white;
     font-size: 30px;
     margin-inline: auto;
@@ -34,7 +36,7 @@
 }
 
 .loginContainer {
-    font-family: 'Cascadia Mono', monospace;
+    font-family: 'Poppins', sans-serif; 
     background-color: rgba(26, 110, 151, 0.6);
     padding: 80px;
     border-radius: 15px;
@@ -42,11 +44,12 @@
     height: 60vh;
     max-width: 900px; 
     text-align: center;
+    animation: fadeIn 1s ease-in-out; 
+
 }
 
-
 .loginForm label {
-    font-family: 'Cascadia Mono', monospace;
+    font-family: 'Poppins', sans-serif; 
     color: white;
     text-align: left;
     margin-bottom: 5px;
@@ -55,7 +58,7 @@
 }
 
 .loginForm input {
-    font-family: 'Cascadia Mono', monospace;
+    font-family: 'Poppins', sans-serif;
     background-color: #333;
     border: none;
     border-radius: 10px;
@@ -66,7 +69,7 @@
 }
 
 .loginForm button {
-    font-family: 'Cascadia Mono', monospace;
+    font-family: 'Poppins', sans-serif; 
     margin-top: 20px;
     margin-bottom: 15px;
     padding: 10px;
@@ -81,38 +84,33 @@
 }
 
 .loginForm button:hover {
-    font-family: 'Cascadia Mono', monospace;
     background-color: #f0f0f0;
     color: #333;
 }
 
 .registerText a {
+    font-family: 'Poppins', sans-serif; 
     padding: 4px;
-    font-family: 'Cascadia Mono', monospace;
     color: #000000;
     text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease;
-    
 }
 
 .registerText a:hover {
-    font-family: 'Cascadia Mono', monospace;
     color: #f0f0f0;
-    
 }
 
-.botaocontent{
+.botaocontent {
     padding: 55px;
 }
-
 
 @keyframes typing {
     from { width: 0; }
     to { width: 15ch; }
 }
+
 @keyframes blink {
     50% { border-color: transparent; }
-    
 }
 
 @media (max-width: 768px) {
@@ -129,3 +127,13 @@
         margin-top: 15px;
     }
 }
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

@@ -18,6 +18,7 @@
   background-color: #242424;
   justify-content: center;
   align-items: center;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .formImage {
@@ -30,6 +31,7 @@
   background-color: #2A82AE;
   border-radius: 15px;
   padding: 50px;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .formImage h1 {
@@ -46,11 +48,13 @@
   align-items: center;
   flex-direction: column;
   padding: 3rem;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .formHeader {
   display: flex;
   justify-content: space-between;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .title h1 {
@@ -229,5 +233,15 @@
   }
   .loginButton button {
     width: 250px;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
