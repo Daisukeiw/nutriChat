@@ -11,3 +11,5 @@ export * from './perfilselect'
 export * from './home'
 
 export * from './sobrenos'
+
+export * from './footer'

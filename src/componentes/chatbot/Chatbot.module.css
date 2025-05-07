@@ -1,43 +1,45 @@
 .bodyContainer {
-    padding: 15px 80px 0;
-    animation: fadeIn 1s ease-in-out; 
-
+    padding: 30px 200px 0;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .chatbotPopup{ 
     width: 100%;
     overflow: hidden;
     background-color: #242424;     
-    border-radius: 15px 15px;
+    border-radius: 25px;
     animation: fadeIn 1s ease-in-out; 
-
+    border: 4px solid var(--azul-escuro);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.371);
+    margin-bottom: 200px;
 }
 
 .chatbotPopup .chatHeader{
     display: flex;
     padding: 15px 22px;
     justify-content: center;
-    background-color: #242424;
-    border-radius: 15px;
+    background-color: var(--azul-escuro);
+    border-radius: 15px 15px 0 0;
 }
 .chatHeader .headerInfo{
     display: flex;
     align-items: center;
-    gap: 2px;
+    gap: 5px;
 }
 .headerInfo svg{
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     padding: 2px;
     background-color: var(--branco);
     border-radius: 50px;
-    fill: var(--azul-claro);
+    fill: var(--azul-escuro);
 }
 .headerInfo h2{
+    font-size: 30px;
     color: #f2f2f2;
 }
 .headerInfo h2 span{
-    color: var(--azul-claro);
+    color: #1a1a1a;
 }
 .chatBody{
     height: 595px;
@@ -99,7 +101,7 @@
     width: 100%;
     padding: 40px 100px;
     animation: fadeIn 1s ease-in-out; 
-
+    
 }
 .chatFooter .chatForm{
     display: flex;

@@ -144,3 +144,92 @@
 .socialIcons a:hover {
     color: var(--branco);
 }
+
+/* ... (seu código atual permanece igual acima) ... */
+
+/* RESPONSIVIDADE */
+
+/* Tablets e celulares */
+@media (max-width: 768px) {
+    .mainSection,
+    .missionSection {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .textSection,
+    .missionImage,
+    .missionText {
+        padding: 0;
+    }
+
+    .textSection {
+        margin-bottom: 2rem;
+    }
+
+    .imageSection,
+    .missionImage {
+        margin-bottom: 2rem;
+    }
+
+    .image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .textSection h1,
+    .missionText h2,
+    .teamSection h2 {
+        font-size: 2rem;
+    }
+
+    .textSection p,
+    .missionText p,
+    .missionText li {
+        font-size: 1rem;
+    }
+
+    .teamGrid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .teamMember img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+    .card {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .textSection h1,
+    .missionText h2,
+    .teamSection h2 {
+        font-size: 1.5rem;
+    }
+
+    .textSection p,
+    .missionText p,
+    .missionText li {
+        font-size: 0.95rem;
+    }
+
+    .teamMember img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .socialIcons a {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .missionSection {
+        flex-direction: column-reverse;
+    }
+}
