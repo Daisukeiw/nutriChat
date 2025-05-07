@@ -149,6 +149,7 @@
     font-weight: bold;
     color: var(--azul-claro); 
     animation: fadeIn 1.5s infinite; 
+}
 
 @keyframes fadeIn {
     from {

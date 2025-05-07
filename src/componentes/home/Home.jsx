@@ -89,8 +89,8 @@ const HomeComponent = () => {
         <div className={style.footerContent}>
           <p>&copy; 2025 NutriChat. Todos os direitos reservados.</p>
           <div className={style.footerLinks}>
-            <a href="/sobre" className={style.footerLink}>
-              Sobre
+            <a href="/sobrenos" className={style.footerLink}>
+              Sobre Nós
             </a>
             <a href="/privacidade" className={style.footerLink}>
               Política de Privacidade
