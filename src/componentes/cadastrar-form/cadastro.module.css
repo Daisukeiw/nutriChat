@@ -20,6 +20,7 @@
   align-items: center;
   animation: fadeIn 1s ease-in-out;
   flex-wrap: wrap; /* Permite que os elementos se ajustem em telas menores */
+  margin-bottom: 200px;
 }
 
 .formImage {

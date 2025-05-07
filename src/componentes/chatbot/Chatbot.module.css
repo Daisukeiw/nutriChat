@@ -11,7 +11,7 @@
     animation: fadeIn 1s ease-in-out; 
     border: 4px solid var(--azul-escuro);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.371);
-
+    margin-bottom: 200px;
 }
 
 .chatbotPopup .chatHeader{

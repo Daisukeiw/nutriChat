@@ -8,7 +8,7 @@ const LayoutPadrao = () => {
             <Conteudo>
             <Outlet />
             </Conteudo>
-            {/* <Footer /> */}
+            <Footer />
         </>
     )
 }
