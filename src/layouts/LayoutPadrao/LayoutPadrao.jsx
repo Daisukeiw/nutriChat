@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom"
-import { Cabecalho, Conteudo } from "../../componentes"
+import { Cabecalho, Conteudo, Footer } from "../../componentes"
 
 const LayoutPadrao = () => {
     return (
@@ -8,7 +8,7 @@ const LayoutPadrao = () => {
             <Conteudo>
             <Outlet />
             </Conteudo>
-
+            {/* <Footer /> */}
         </>
     )
 }

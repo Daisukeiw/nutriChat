@@ -1,162 +1,253 @@
 .profileContainer {
-    background-color: #242424;
-    color: #fff;
-    padding: 20px;
+    max-width: 1000px;
+    margin: 50px auto;
+    background: var(--azul-escuro);
     border-radius: 15px;
-    max-width: 600px;
-    margin: 15px auto;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.371);
+    font-family: Arial, sans-serif;
     animation: fadeIn 1s ease-in-out;
 }
 
 .profileTitle {
-    font-size: 24px;
-    margin-bottom: 20px;
-    border-bottom: 4px solid #215A6D;
-    padding-bottom: 10px;
-    text-align: center;
-}
-
-.profileSection {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    animation: fadeIn 1s ease-in-out;
-}
-
-.profileInput {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    background-color: #2e2e2e;
-    border: 1px solid #3a3a3a;
-    border-radius: 4px;
-    color: #fff;
-}
-
-.profileInputDisabled {
-    background-color: #3a3a3a; 
-    color: #a0a0a0; 
-    cursor: not-allowed; 
-    border: 1px solid #555;
-}
-
-.profileActions div {
-    margin-bottom: 10px;
-}
-
-
-.profileButton,
-.logoutButton {
-    width: 150px; 
-    text-align: center; 
-    padding: 10px 15px;
-    border-radius: 4px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin: 0 10px; 
-}
-
-
-.profileButton {
-    background-color: var(--azul-claro);
-    color: #fff;
-    border: none;
-}
-
-.profileButton:hover {
-    background-color: var(--azul-escuro);
-}
-
-
-.logoutButton {
-    background-color: #d9534f; 
-    color: #fff;
-    border: none;
-}
-
-.logoutButton:hover {
-    background-color: #c9302c; 
-}
-
-
-.profileButtons {
+    font-size: 40px;
+    margin-bottom: 60px;
+    color: #bebebe;
     display: flex;
     justify-content: center;
-    gap: 15px; 
-    margin-top: 20px;
+    align-items: center;
 }
 
-
-
-.imageContainer {
+.profileContent {
     display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    gap: 15px;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
+.profileImageSection {
+    flex: 1 1 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .profileImage {
-    width: 100px;
-    height: 100px;
+    width: 240px;
+    height: 240px;
     border-radius: 50%;
     object-fit: cover;
-
+    border: 4px solid #bebebe;
 }
 
+.profileLabel {
+    font-size: 18px;
+    color: var(--branco);
+}
 
-.fileUploadLabel {
+.uploadLabel {
+    font-size: 18px;
     display: inline-block;
-    padding: 10px 15px;
-    background-color: var(--azul-claro);
-    color: #fff;
-    border-radius: 4px;
+    margin-top: 15px;
+    padding: 13px 18px;
+    background-color: #bebebe;
+    color: #1e1e1e;
+    border-radius: 10px;
     cursor: pointer;
-    text-align: center;
-    font-size: 0.9rem;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-    margin-bottom: 5px;
+    transition: background 0.3s ease;
 }
 
+.uploadLabel:hover {
+    background-color: #747373;
+}
 
 .fileInput {
     display: none;
 }
 
-
 .fileName {
-    margin-top: 5px;
-    font-size: 0.85rem;
-    color: #a0a0a0;
-    font-style: italic;
-    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #bebebe;
 }
 
+.profileInfo {
+    flex: 2 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.inputLabel {
+    font-size: 20px;
+    color: #bebebe;
+}
+
+.profileInput {
+    padding: 10px;
+    background-color: #bebebe;
+    border-radius: 12px;
+    font-size: 18px;
+    width: 100%;
+    height: 60px;
+    color: var(--preto);
+    border: none;
+}
+
+.profileInput.disabled {
+    background-color: #7c7c7c;
+    color: #d7d7d7;
+}
+
+.profileButtons {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    height: 50px;
+    width: 100%;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn.save {
+    background-color: #bebebe;
+    color: #1e1e1e;
+}
+
+.btn.save:hover {
+    background-color: #7c7c7c;
+}
+
+.btn.logout {
+    background-color: #dc3545;
+}
+
+.btn.logout:hover {
+    background-color: #a61e2c;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .profileContent {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profileImageSection {
+        width: 100%;
+    }
+
+    .profileInfo {
+        width: 100%;
+    }
+
+    .profileButtons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .profileTitle {
+        font-size: 32px;
+    }
+
+    .profileImage {
+        width: 200px;
+        height: 200px;
+    }
+
+    .uploadLabel {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+
+    .inputLabel {
+        font-size: 18px;
+    }
+
+    .profileInput {
+        font-size: 16px;
+        height: 50px;
+    }
+
+    .btn {
+        font-size: 16px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profileTitle {
+        font-size: 28px;
+    }
+
+    .profileImage {
+        width: 150px;
+        height: 150px;
+    }
+
+    .uploadLabel {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .inputLabel {
+        font-size: 16px;
+    }
+
+    .profileInput {
+        font-size: 14px;
+        height: 40px;
+    }
+
+    .btn {
+        font-size: 14px;
+        height: 40px;
+    }
+
+    .profileButtons {
+        gap: 10px;
+    }
+}
 
 .loadingContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; 
-    background-color: #1e1e1e; 
+    height: 100vh;
+    background-color: #1e1e1e;
     color: #fff;
 }
-
 
 .loadingText {
     font-size: 1.2rem;
     font-weight: bold;
-    color: var(--azul-claro); 
-    animation: fadeIn 1.5s infinite; 
+    color: var(--azul-claro);
+    animation: fadeIn 1.5s infinite;
+}
 
 @keyframes fadeIn {
     from {
-      opacity: 0;
-      transform: translateY(20px);
+        opacity: 0;
+        transform: translateY(20px);
     }
     to {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
+}

@@ -85,71 +85,69 @@ const PerfilSelect = () => {
     }
 
     return (
-        <div className={style.profileContainer}>
-            <h2 className={style.profileTitle}>Configurações da conta</h2>
-            <div className={style.profileSection}>
-                <div className={style.profileActions}>
-                    <div className={style.imageContainer}>
-                        <p>Imagem de Perfil</p>
-                        {profileImage && (
-                            <img
-                                src={profileImage}
-                                alt="Imagem de Perfil"
-                                className={style.profileImage}
+            <div className={style.profileContainer}>
+                <div className={style.profileBody}>
+                    <h2 className={style.profileTitle}>PERFIL DO USUÁRIO</h2>
+        
+                    <div className={style.profileContent}>
+                        <div className={style.profileImageSection}>
+                            {profileImage && (
+                                <img
+                                    src={profileImage}
+                                    alt="Imagem de Perfil"
+                                    className={style.profileImage}
+                                />
+                            )}
+                            <label htmlFor="fileUpload" className={style.uploadLabel}>
+                                Escolher Imagem
+                            </label>
+                            <input
+                                type="file"
+                                id="fileUpload"
+                                accept="image/*"
+                                onChange={handleImageUpload}
+                                className={style.fileInput}
                             />
-                        )}
-                        <label htmlFor="fileUpload" className={style.fileUploadLabel}>
-                            Escolher Imagem
-                        </label>
-                        <input
-                            type="file"
-                            id="fileUpload"
-                            accept="image/*"
-                            onChange={handleImageUpload}
-                            className={style.fileInput} // Esconde o input real
-                        />
-                        {profileImage && (
-                            <p className={style.fileName}>Imagem selecionada!</p>
-                        )}
+                            {profileImage && (
+                                <p className={style.fileName}>Imagem selecionada!</p>
+                            )}
+                        </div>
+        
+                        <div className={style.profileInfo}>
+                            <label className={style.inputLabel}>E-mail</label>
+                            <input
+                                type="email"
+                                value={email}
+                                disabled
+                                className={`${style.profileInput} ${style.disabled}`}
+                            />
+                            <label className={style.inputLabel}>Nome</label>
+                            <input
+                                type="text"
+                                value={nome}
+                                onChange={(e) => setNome(e.target.value)}
+                                className={style.profileInput}
+                            />
+                            <label className={style.inputLabel}>Telefone</label>
+                            <input
+                                type="tel"
+                                value={telefone}
+                                onChange={(e) => setTelefone(e.target.value)}
+                                className={style.profileInput}
+                            />
+                        </div>
                     </div>
-                    <div>
-                        <p>E-mail</p>
-                        <input
-                            type="email"
-                            value={email}
-                            disabled
-                            className={`${style.profileInput} ${style.profileInputDisabled}`}
-                        />
-                    </div>
-                    <div>
-                        <p>Nome</p>
-                        <input
-                            type="text"
-                            value={nome}
-                            onChange={(e) => setNome(e.target.value)}
-                            className={style.profileInput}
-                        />
-                    </div>
-                    <div>
-                        <p>Telefone</p>
-                        <input
-                            type="tel"
-                            value={telefone}
-                            onChange={(e) => setTelefone(e.target.value)}
-                            className={style.profileInput}
-                        />
-                    </div>
+        
                     <div className={style.profileButtons}>
-                        <button className={style.profileButton} onClick={handleUpdateProfile}>
+                        <button className={`${style.btn} ${style.save}`} onClick={handleUpdateProfile}>
                             Salvar Alterações
                         </button>
-                        <button className={style.logoutButton} onClick={handleLogout}>
-                            Logout
+                        <button className={`${style.btn} ${style.logout}`} onClick={handleLogout}>
+                            Sair da Conta
                         </button>
                     </div>
                 </div>
             </div>
-        </div>
     );
 };
 

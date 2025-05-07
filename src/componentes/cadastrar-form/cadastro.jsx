@@ -4,6 +4,7 @@ import { auth, db } from "../../firebaseconfig/firebaseconfig";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { doc, setDoc } from "firebase/firestore";
 import { Link } from 'react-router-dom';
+import { ChatBotIcon } from '../chatbot/ChatBotIcon';
 
 const Cadastro = () => {
   const [email, setEmail] = useState('');
@@ -56,9 +57,10 @@ const Cadastro = () => {
     <div className={style.bodycadastro}>
       <div className={style.container}>
         <div className={style.formImage}>
+          <ChatBotIcon />
           <h1>Você já possui uma conta?</h1>
           <div className={style.loginButton}>
-              <Link to ="/login"><button>Login</button></Link>
+              <Link to ="/login"><button>Entrar</button></Link>
           </div>
         </div>
 
@@ -66,7 +68,7 @@ const Cadastro = () => {
           <form onSubmit={handleSignIn}>
             <div className={style.formHeader}>
               <div className={style.title}>
-                <h1>Cadastre-se</h1>
+                <h1>CADASTRO</h1>
               </div>
             </div>
 

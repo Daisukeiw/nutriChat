@@ -7,38 +7,37 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #298dbe;
+    background-color: #242424;
     padding: 20px;
     border-radius: 20px;
-    height: 80vh;
-    width: 100%; 
     max-width: 1000px; 
     margin: 50px auto; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     font-family: 'Poppins', sans-serif;
     animation: fadeIn 1s ease-in-out; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.371);
+    width: 100%;
+    height: 80vh;
 
 }
 
 .titleform {
     font-family: 'Poppins', sans-serif; 
-    color: white;
-    font-size: 30px;
+    color: var(--azul-claro);
+    font-size: 45px;
     margin-inline: auto;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     text-align: center;
-
     overflow: hidden; 
     white-space: nowrap; 
-    border-right: 2px solid white; 
+    border-right: 2px solid var(--azul-claro); 
     width: 0; 
     animation: typing 1.8s steps(15, end) forwards, blink 0.8s step-end infinite; 
 }
 
 .loginContainer {
     font-family: 'Poppins', sans-serif; 
-    background-color: rgba(26, 110, 151, 0.6);
-    padding: 80px;
+    background-color: var(--azul-claro);
+    padding: 50px 120px 20px 120px;
     border-radius: 15px;
     width: 100%;
     height: 60vh;
@@ -48,11 +47,19 @@
 
 }
 
+.loginContainerTitle{ 
+    font-family: 'Poppins', sans-serif; 
+    color: var(--branco);
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
 .loginForm label {
     font-family: 'Poppins', sans-serif; 
     color: white;
     text-align: left;
-    margin-bottom: 5px;
+    font-size: 20px;
+    margin-bottom: 10px;
     margin-top: 10px;
     display: block; 
 }
@@ -61,20 +68,20 @@
     font-family: 'Poppins', sans-serif;
     background-color: #333;
     border: none;
+    font-size: 17px;
     border-radius: 10px;
     padding: 15px;
     color: white;
     width: 100%;
-    margin-bottom: 15px; 
 }
 
 .loginForm button {
     font-family: 'Poppins', sans-serif; 
-    margin-top: 20px;
+    font-size: 20px;
     margin-bottom: 15px;
     padding: 10px;
     background-color: #333;
-    color: #2a82ae;
+    color: var(--branco);
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -84,20 +91,23 @@
 }
 
 .loginForm button:hover {
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: #242424;
+    color: var(--branco);
 }
-
+.registerText {
+    color: var(--branco);
+    font-size: 20px;
+}
 .registerText a {
     font-family: 'Poppins', sans-serif; 
     padding: 4px;
-    color: #000000;
+    color: var(--branco);
     text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .registerText a:hover {
-    color: #f0f0f0;
+    color: #bfbfbf;
 }
 
 .botaocontent {
@@ -116,15 +126,20 @@
 @media (max-width: 768px) {
     .loginBorder {
         height: auto; 
-        padding: 15px;
+        padding: 40px 15px;
     }
 
     .loginContainer {
         padding: 20px;
+        height: 80vh;
     }
 
     .loginForm button {
         margin-top: 15px;
+    }
+    .titleform {
+        font-size: 35px;
+
     }
 }
 @keyframes fadeIn {

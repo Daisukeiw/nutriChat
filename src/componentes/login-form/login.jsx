@@ -26,6 +26,7 @@ const Login = () => {
     <div className={style.loginBorder}>
       <h2 className={style.titleform}>Welcome Back :)</h2>
       <div className={style.loginContainer}>
+        <h2 className={style.loginContainerTitle}>LOGIN</h2>
         <form className={style.loginForm} onSubmit={handleLogin}>
           <label htmlFor="email">Email</label>
           <input

@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-
 .bodycadastro {
   width: 100%;
   height: 100%;
@@ -11,53 +10,67 @@
 }
 
 .container {
-  width: 80%;
+  width: 90%;
+  max-width: 1200px;
   height: 80vh;
   display: flex;
-  border-radius: 15px;
+  border-radius: 20px;
   background-color: #242424;
   justify-content: center;
   align-items: center;
   animation: fadeIn 1s ease-in-out;
+  flex-wrap: wrap; /* Permite que os elementos se ajustem em telas menores */
 }
 
 .formImage {
-  width: 50%;
+  width: 40%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #2A82AE;
-  border-radius: 15px;
+  border-radius: 20px 0 0 20px;
   padding: 50px;
+  gap: 30px;
   animation: fadeIn 1s ease-in-out;
+}
+
+.formImage svg {
+  width: 250px;
+  height: 250px;
+  fill: var(--branco);
+  background-color: var(--preto);
+  border-radius: 50%;
+  padding: 20px;
 }
 
 .formImage h1 {
   font-weight: 600;
-  font-size: 30px;
+  font-size: 28px;
   color: #fff;
   text-align: center;
 }
 
 .form {
-  width: 100%;
+  width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 3rem;
+
   animation: fadeIn 1s ease-in-out;
 }
 
 .formHeader {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  margin-bottom: 10px;
   animation: fadeIn 1s ease-in-out;
 }
 
 .title h1 {
+  font-size: 40px;
   color: #fff;
 }
 
@@ -67,19 +80,20 @@
 }
 
 .loginButton button {
-  width: 200px; 
-  margin-top: 40px;
-  height: 40px;
+  width: 250px;
+  height: 50px;
+  font-size: 20px;
   border: none;
-  background-color: #2D2D29;
-  border-radius: 7px;
+  background-color: var(--preto);
+  border-radius: 10px;
   cursor: pointer;
   color: #fff;
 }
 
 .loginButton button:hover {
-  background-color: #000;
-  transition: all 0.4s;
+  background-color: #242424;
+  color: #c3c3c3;
+  transition: all 0.6s;
 }
 
 .loginButton button a {
@@ -88,22 +102,12 @@
   color: #fff;
 }
 
-.formHeader h1::after {
-  content: '';
-  display: block;
-  width: 5rem;
-  height: 0.3rem;
-  background-color: #2A82AE;
-  margin: 0 auto;
-  position: absolute;
-  border-radius: 10px;
-}
-
 .inputGroup {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   padding: 1rem 0;
+  width: 100%;
   width: 400px;
 }
 
@@ -116,36 +120,43 @@
 .inputBox input {
   margin: 0.6rem 0;
   padding: 0.8rem 1.2rem;
+  height: 50px;
   border: none;
   border-radius: 10px;
   box-shadow: 1px 1px 6px #0000001c;
 }
 
 .inputBox input:focus-visible {
-  outline: 1px solid #2A82AE
+  outline: 1px solid #2A82AE;
 }
 
 .inputBox label {
-  font-size: 0.75rem;
+  font: 20px;
   font-weight: 600;
-  color: #fff;
+  color: #f2f2f2;
 }
+
 
 .inputBox input::placeholder {
   color: #000000be;
 }
 
-.singupButton button{
+.singupButton button {
   width: 100%;
   border: none;
   background-color: #2A82AE;
   padding: 0.62rem;
-  border-radius: 7px;
+  height: 60px;
+  border-radius: 10px;
   cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  color: #f2f2f2;
 }
 
 .singupButton button:hover {
-  background-color: #fff;
+  background-color: var(--azul-escuro);
+  color: #c3c3c3;
   transition: 0.4s;
 }
 
@@ -158,19 +169,26 @@
 
 /* Estilo para o botão de upload */
 .fileUploadLabel {
-  display: inline-block;
-  padding: 0.8rem 1.2rem;
-  background-color: #2A82AE;
-  color: #fff;
-  border-radius: 7px;
+  display: flex;
+  padding: 0 0 0 20px;
+  align-items: center;
+  text-align: center;
+  background-color: var(--branco);
+  height: 50px;
+  border-radius: 10px;
   cursor: pointer;
   text-align: center;
   transition: background-color 0.3s ease;
   margin-top: 0.6rem;
 }
-
 .fileUploadLabel:hover {
-  background-color: #1e6b8c;
+  background-color: #b3b3b3;
+}
+
+.inputBox .fileUploadLabel{
+  font: 20px;
+  font-weight: 100;
+  color: #000000be;
 }
 
 /* Esconde o input real */
@@ -185,56 +203,53 @@
   font-style: italic;
 }
 
-@media (max-width: 1200px) {
+/* Responsividade */
+@media (max-width: 1024px) {
   .container {
     flex-direction: column-reverse;
     height: auto;
-  }
-  .container {
-    height: 100vh;
-  }
-  .formImage, .form {
     width: 100%;
+  }
+  .formImage svg {
+    display: none;
+  }
+
+  .formImage {
+    width: 100%;
+    border-radius: 0 0 20px 20px;
   }
 
   .form {
+    width: 100%;
     padding: 2rem 1rem;
   }
-
 }
 
-@media (max-width: 680px) {
-  .container {
-    width: 100%;
-    height: 100vh;
-  }
-}
+@media (max-width: 768px) {
 
-
-@media (max-width: 500px) {
-  .formImage h1 {
-    font-size: 30px;
-  }
-  .form {
-  }
-  .formHeader {
-    display: flex;
-    justify-content: space-between;
-  }
-  .container {
-    width: 100%;
-    height: 100vh;
-  }
   .inputGroup {
+    width: 100%;
     width: 300px;
   }
+
+  .loginButton button {
+  }
+  .bodycadastro {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+
   .inputBox input {
     padding: 0.6rem 1rem;
   }
-  .loginButton button {
-    width: 250px;
+
+  .singupButton button {
+    font-size: 20px;
   }
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
