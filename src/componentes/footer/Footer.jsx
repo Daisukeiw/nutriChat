@@ -6,7 +6,7 @@ const Footer = () => {
         <div className={style.footerContent}>
           <p>&copy; 2025 NutriChat. Todos os direitos reservados.</p>
           <div className={style.footerLinks}>
-            <a href="/sobre" className={style.footerLink}>
+            <a href="/sobrenos" className={style.footerLink}>
               Sobre
             </a>
             <a href="/privacidade" className={style.footerLink}>

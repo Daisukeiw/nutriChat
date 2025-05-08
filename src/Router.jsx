@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { Cadastrar, Consultar, Home, Perfil, LoginPage, Contatar } from "./pages";
+import { Cadastrar, Consultar, Home, Perfil, LoginPage, Sobrenos } from "./pages";
 import { LayoutPadrao } from "./layouts";
 
 const Router = () => {
@@ -13,6 +14,8 @@ const Router = () => {
         <Route path="/cadastrar" element={<Cadastrar />}/>
         <Route path="/perfil" element={ <Perfil /> }/>
         <Route path="/contato" element={ <Contatar /> }/>
+        <Route path="/sobrenos" element={ <Sobrenos /> }/>
+
       </Route>
     </Routes>
   );

@@ -1,0 +1,235 @@
+/* Card principal */
+.card {
+    background-color: #1e1e1e; /* Cor mais escura para destacar do fundo */
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar o card */
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+/* Contêiner principal */
+.container {
+    color: var(--branco);
+}
+
+/* Seção principal */
+.mainSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4rem; /* Aumenta o espaçamento entre esta seção e a próxima */
+}
+
+.textSection {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.textSection h1 {
+    font-size: 2.5rem;
+    color: var(--azul-claro);
+    margin-bottom: 1rem;
+}
+
+.textSection p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.imageSection {
+    flex: 1;
+    text-align: center;
+}
+
+.image {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Seção de Missão */
+.missionSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4rem; /* Aumenta o espaçamento entre esta seção e a próxima */
+}
+
+.missionImage {
+    flex: 1;
+    text-align: center;
+    padding-right: 2rem;
+}
+
+.missionText {
+    flex: 1;
+}
+
+.missionText h2 {
+    font-size: 2rem;
+    color: var(--azul-claro);
+    margin-bottom: 1rem;
+}
+
+.missionText p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.missionText ul {
+    list-style: none;
+    padding: 0;
+}
+
+.missionText li {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--branco);
+}
+
+/* Seção de Responsáveis */
+.teamSection {
+    margin-bottom: 2rem;
+}
+
+.teamSection h2 {
+    font-size: 2rem;
+    color: var(--azul-claro);
+    margin-bottom: 1rem;
+}
+
+.teamGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+}
+
+.teamMember {
+    text-align: center;
+}
+
+.teamMember img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+    border: 2px solid var(--azul-claro);
+}
+
+.teamMember p {
+    font-size: 1rem;
+    color: var(--branco);
+}
+
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.socialIcons a {
+    color: var(--azul-claro);
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.socialIcons a:hover {
+    color: var(--branco);
+}
+
+/* ... (seu código atual permanece igual acima) ... */
+
+/* RESPONSIVIDADE */
+
+/* Tablets e celulares */
+@media (max-width: 768px) {
+    .mainSection,
+    .missionSection {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .textSection,
+    .missionImage,
+    .missionText {
+        padding: 0;
+    }
+
+    .textSection {
+        margin-bottom: 2rem;
+    }
+
+    .imageSection,
+    .missionImage {
+        margin-bottom: 2rem;
+    }
+
+    .image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .textSection h1,
+    .missionText h2,
+    .teamSection h2 {
+        font-size: 2rem;
+    }
+
+    .textSection p,
+    .missionText p,
+    .missionText li {
+        font-size: 1rem;
+    }
+
+    .teamGrid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .teamMember img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+    .card {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .textSection h1,
+    .missionText h2,
+    .teamSection h2 {
+        font-size: 1.5rem;
+    }
+
+    .textSection p,
+    .missionText p,
+    .missionText li {
+        font-size: 0.95rem;
+    }
+
+    .teamMember img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .socialIcons a {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .missionSection {
+        flex-direction: column-reverse;
+    }
+}
