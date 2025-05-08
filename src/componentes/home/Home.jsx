@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import style from './Home.module.css';
 import { ChatBotIcon } from '../chatbot/ChatBotIcon';
 import { useAuth } from '../../firebaseconfig/useAuth';
-import comida from '../../../public/imgs/food.png'
-import beneficios from '../../../public/imgs/chart.png'
-import engrenagem from '../../../public/imgs/cogwheel.png'
-import pratoComida from '../../../public/imgs/comidaPrato.png'
+import comida from '/imgs/food.png'
+import beneficios from '/imgs/chart.png'
+import engrenagem from '/imgs/cogwheel.png'
+import pratoComida from '/imgs/comidaPrato.png'
 
 const HomeComponent = () => {
   const usuario = useAuth(); // Verifica se o usuário está autenticado
