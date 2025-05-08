@@ -62,15 +62,15 @@
 }
 
 .chatBody .botMessage svg{
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     flex-shrink: 0;
     padding: 2px;
     margin-bottom: 2;
     align-self: flex-end;
     background-color: var(--branco);
     border-radius: 50px;
-    fill: var(--azul-claro);
+    fill: var(--azul-escuro);
 }
 
 .chatBody .message .messageText{
@@ -83,6 +83,7 @@
 
 .chatBody .botMessage .messageText{
     background-color: var(--branco);
+    font-size: 18px;
     border-radius: 13px 13px 13px 3px;
 }
 
@@ -94,6 +95,7 @@
 .chatBody .userMessage .messageText{
     background-color: var(--azul-escuro);
     color: var(--branco);
+    font-size: 18px;
     border-radius: 13px 13px 3px 13px;
 }
 .chatFooter{
