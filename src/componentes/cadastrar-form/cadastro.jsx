@@ -48,6 +48,7 @@ const Cadastro = () => {
       });
 
       alert("Usuário cadastrado com sucesso!");
+      window.location.href = "/perfil"; // Redirecionar para a página de cadastrar
     } catch (err) {
       console.error("Erro ao cadastrar usuário:", err);
     }
