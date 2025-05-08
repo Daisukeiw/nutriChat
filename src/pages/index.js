@@ -8,4 +8,8 @@ export * from './cadastrar/Cadastrar';
 
 export * from './perfil/Perfil';
 
+
+export * from './contato/Contato';
+
 export * from './sobrenos/Sobrenos';
+
