@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import style from './Home.module.css';
+import style from './home.module.css';
 import { ChatBotIcon } from '../chatbot/ChatBotIcon';
 import { useAuth } from '../../firebaseconfig/useAuth';
 import comida from '../../assets/imgs/food.png';
