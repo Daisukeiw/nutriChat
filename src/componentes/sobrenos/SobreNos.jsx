@@ -1,6 +1,13 @@
-import style from './SobreNos.module.css';
-import { FaGithub, FaInstagram } from 'react-icons/fa'; // Importa os ícones
 
+import { FaGithub, FaInstagram } from 'react-icons/fa'; // Importa os ícones
+import sobreNosimg1 from '../../assets/imgs/sobreNosimg1.png';
+import sobreNosimg2 from '../../assets/imgs/sobreNosimg2.jpg'
+import murillo from '../../assets/imgs/murillo-perfil.jpg';
+import rafael from '../../assets/imgs/rafael-perfil.jpg';
+import vinicius from '../../assets/imgs/vinicius-perfil.jpg';
+import vitor from '../../assets/imgs/vitor-perfil.jpg';
+
+import style from './SobreNos.module.css';
 const SobreNos = () => {
     return (
         <div className={style.card}>
@@ -17,7 +24,7 @@ const SobreNos = () => {
                     </div>
                     <div className={style.imageSection}>
                         <img
-                            src="/imgs/sobreNosimg1.png"
+                            src= {sobreNosimg1}
                             alt="Equipe da empresa"
                             className={style.image}
                         />
@@ -28,7 +35,7 @@ const SobreNos = () => {
                 <div className={style.missionSection}>
                     <div className={style.missionImage}>
                         <img
-                            src="imgs/sobreNosimg2.jpg"
+                            src={sobreNosimg2}
                             alt="Missão da empresa"
                             className={style.image}
                         />
@@ -51,7 +58,7 @@ const SobreNos = () => {
                     <h2>Time por Trás do NutriChat</h2>
                     <div className={style.teamGrid}>
                         <div className={style.teamMember}>
-                            <img src="imgs/murillo-perfil.jpg" alt="Programador 1" />
+                            <img src={murillo} alt="Programador 1" />
                             <p>Murillo Castro</p>
                             <div className={style.socialIcons}>
                                 <a href="https://github.com/Muca5" target="_blank" rel="noopener noreferrer">
@@ -63,7 +70,7 @@ const SobreNos = () => {
                             </div>
                         </div>
                         <div className={style.teamMember}>
-                            <img src="imgs/rafael-perfil.jpg" alt="Programador 2" />
+                            <img src={rafael}  alt="Programador 2" />
                             <p>Rafael Lopes</p>
                             <div className={style.socialIcons}>
                                 <a href="https://github.com/RafaelFLopes" target="_blank" rel="noopener noreferrer">
@@ -75,7 +82,7 @@ const SobreNos = () => {
                             </div>
                         </div>
                         <div className={style.teamMember}>
-                            <img src="imgs/vinicius-perfil.jpg" alt="Programador 3" />
+                            <img src={vinicius}  alt="Programador 3" />
                             <p>Vinicius Rodrigues</p>
                             <div className={style.socialIcons}>
                                 <a href="https://github.com/viniciusrrodrigues" target="_blank" rel="noopener noreferrer">
@@ -87,7 +94,7 @@ const SobreNos = () => {
                             </div>
                         </div>
                         <div className={style.teamMember}>
-                        <img src="imgs/vitor-perfil.jpg" alt="Programador 4" />
+                        <img src={vitor}  alt="Programador 4" />
                             <p>Vitor Iwamoto</p>
                             <div className={style.socialIcons}>
                                 <a href="https://github.com/Daisukeiw" target="_blank" rel="noopener noreferrer">
