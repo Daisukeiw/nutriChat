@@ -123,6 +123,18 @@
     50% { border-color: transparent; }
 }
 
+@media (max-width: 1469px) {
+    .loginContainer {
+        padding: 20px;
+    }
+    .loginForm button {
+        margin-bottom: 5px;
+    }
+    .titleform {
+        margin-bottom: 10px;
+    }
+}
+
 @media (max-width: 768px) {
     .loginBorder {
         height: auto; 
@@ -131,7 +143,7 @@
 
     .loginContainer {
         padding: 20px;
-        height: 80vh;
+        height: 100vh;
     }
 
     .loginForm button {
@@ -140,6 +152,10 @@
     .titleform {
         font-size: 35px;
 
+    }
+    .registerText {
+        color: var(--branco);
+        font-size: 17px;
     }
 }
 @keyframes fadeIn {

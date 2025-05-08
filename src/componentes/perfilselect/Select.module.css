@@ -139,6 +139,9 @@
 
 /* Responsividade */
 @media (max-width: 1024px) {
+    .profileContainer {
+        border-radius: 0;
+    }
     .profileContent {
         flex-direction: column;
         align-items: center;
@@ -197,23 +200,14 @@
         font-size: 28px;
     }
 
-    .profileImage {
-        width: 150px;
-        height: 150px;
-    }
-
     .uploadLabel {
         font-size: 14px;
         padding: 8px 12px;
     }
 
-    .inputLabel {
-        font-size: 16px;
-    }
-
     .profileInput {
         font-size: 14px;
-        height: 40px;
+        height: 55px;
     }
 
     .btn {

@@ -358,7 +358,11 @@
         width: 60px;
         height: 60px;
     }
-
+    .iconCard img {
+        width: 60px;
+        height: 60px;
+        fill: var(--branco);
+    }
     .item h2 {
         font-size: 20px;
     }
@@ -381,6 +385,11 @@
     .iconCard svg {
         width: 40px;
         height: 40px;
+    }
+    .iconCard img {
+        width: 40px;
+        height: 40px;
+        fill: var(--branco);
     }
 
     .item h2 {
