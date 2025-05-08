@@ -77,6 +77,7 @@ const handleUpdateProfile = async () => {
                 profileImage, // Atualiza a imagem de perfil no Firestore
             });
             alert("Perfil atualizado com sucesso!");
+            window.location.reload();
         } catch (error) {
             console.error("Erro ao atualizar o perfil:", error);
             alert("Não foi possível atualizar o perfil. Tente novamente.");
